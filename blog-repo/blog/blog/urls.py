@@ -18,11 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
-from .views import index #importamos desde views la funcion index
+from blog.views import IndexView #importamos desde views la funcion index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', index, name='index'), #path indica la ruta url, indicando el archivo html
+    path('', IndexView.as_view(), name='home'), #path indica la ruta url, indicando el archivo html
 ]
 
 if settings.DEBUG:
