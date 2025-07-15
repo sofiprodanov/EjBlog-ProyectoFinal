@@ -24,6 +24,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', IndexView.as_view(), name='home'), #path indica la ruta url, indicando el archivo html
     path('', include('apps.user.urls')),
+    path('', include('apps.post.urls')),
 ]
 
 if settings.DEBUG:
