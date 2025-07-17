@@ -11,11 +11,13 @@
       href="{% static 'assets/favicon.ico' %}"
       type="image/x-icon"
     />
-    <script type="module" src="{% static 'js/tailwind.js' %}"></script>
     {% block extra_head_layout %} {% endblock extra_head_layout %}
+    <script type="module" src="{% static 'js/tailwind.js' %}"></script>
     <style type="text/tailwindcss">
       @theme {
-        ----------color-primary: rgba(198, 113, 255, 1);
+        --breakpoint-xs: 30rem;
+        --color-primary: rgb(26, 227, 15);
+        --color-secondary: rgb(16, 24, 90);
       }
     </style>
   </head>
