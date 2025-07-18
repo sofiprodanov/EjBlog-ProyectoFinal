@@ -23,6 +23,7 @@ from blog.views import IndexView #importamos desde views la funcion index
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', IndexView.as_view(), name='home'), #path indica la ruta url, indicando el archivo html
+    path("__reload__/", include("django_browser_reload.urls")),
     path('', include('apps.user.urls')),
     path('', include('apps.post.urls')),
 ]

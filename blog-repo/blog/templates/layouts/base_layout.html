@@ -24,4 +24,7 @@
   <body class="min-w-[280px]">
     {% block content_layout %} {% endblock content_layout %}
   </body>
+  {% load django_browser_reload %}
+  {% django_browser_reload_script %}
+
 </html>
