@@ -4,9 +4,42 @@
 
 
 {% block content %}
-<main class="w-full h-auto bg-[#2d0935] justify-center items-center">
-  <div class="w-[74.5rem] bg-red ">
-    <h1>Our News</h1>
+<main
+  class="w-full h-auto lg:h-screen flex justify-center items-center bg-[#FCF7EF] border-black border-[1px] flex-col">
+  <div class="w-[74.5rem] items-center flex justify-center flex-col gap-5 my-6">
+    <h1 class="text-8xl font-semibold">Our News</h1>
+    <p>Get the latest updates and deeper coffee experience from IMAJI Coffee</p>
+    <img src="../static/fotoPortada.png" alt="Foto de portada">
+    <div class="w-full flex flex-col gap-2">
+      <p class="text-3xl font-semibold">Collaboration to Develop Coffee and Beverage Industry Expertise in Indonesia</p>
+      <span>4 Min · August 19, 2022</span>
+    </div>
   </div>
 </main>
+
+<section class="w-full flex justify-center items-center">
+  <div class="w-[74.5rem] items-center flex justify-center flex-col gap-5 my-6">
+    <article class="w-full flex border-t-[1px] border-gray-400 gap-4 items-center p-4">
+      <img src="../static/fotoBlog1.png" alt="">
+      <div class="flex flex-col gap-3">
+        <p class="text-4xl font-semibold">Visited Doesoen Sirap Coffee, The Producer of Robusta in Central Java</p>
+        <span>4 Min · August 19, 2022</span>
+      </div>
+    </article>
+    <article class="w-full flex border-t-[1px] border-gray-400 gap-4 items-center p-4">
+      <img src="../static/fotoBlog1.png" alt="">
+      <div class="flex flex-col gap-3">
+        <p class="text-4xl font-semibold">Visited Doesoen Sirap Coffee, The Producer of Robusta in Central Java</p>
+        <span>4 Min · August 19, 2022</span>
+      </div>
+    </article>
+    <article class="w-full flex border-t-[1px] border-gray-400 gap-4 items-center p-4">
+      <img src="../static/fotoBlog1.png" alt="">
+      <div class="flex flex-col gap-3">
+        <p class="text-4xl font-semibold">Visited Doesoen Sirap Coffee, The Producer of Robusta in Central Java</p>
+        <span>4 Min · August 19, 2022</span>
+      </div>
+    </article>
+  </div>
+</section>
 {% endblock content %}
