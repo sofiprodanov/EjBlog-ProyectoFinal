@@ -1,20 +1,20 @@
 {% extends 'layouts/base_layout.html' %}
 
 {% block title_layout %}
-  {% block title %}
-    IA 
-  {% endblock title %}
-    | Blog
+{% block title %}
+IA
+{% endblock title %}
+| Blog
 {% endblock title_layout %}
 
 {% block extra_head_layout %}
-  {% block extra_head %} {% endblock extra_head %}
+{% block extra_head %} {% endblock extra_head %}
 {% endblock extra_head_layout %}
 
 {% block content_layout %}
-  {% include 'components/commons/header.html' %}
-  <main class="min-h-[calc(100dvh_-_112px)] flex justify-center">
+{% include 'components/commons/header.html' %}
+<main class="min-h-[calc(100dvh_-_112px)] flex justify-center flex-col">
   {% block content %} ⚠️ Colocar contenido {% endblock content %}
-  </main>
-  {% include 'components/commons/footer.html' %}
+</main>
+{% include 'components/commons/footer.html' %}
 {% endblock content_layout %}
