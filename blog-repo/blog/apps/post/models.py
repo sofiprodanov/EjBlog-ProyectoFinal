@@ -6,6 +6,7 @@ from django.utils import timezone
 #Categoria
 class Categoria(models.Model):
     nombre = models.CharField(max_length=30, null=False)
+    
 
 class Post(models.Model):
     titulo=models.CharField(max_length=50, null=False)
