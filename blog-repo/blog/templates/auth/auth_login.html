@@ -1,0 +1,15 @@
+{% extends 'layouts/auth_layout.html' %}
+
+
+{% block title %} Inicio Sesion {% endblock title %}
+
+{% block content %}
+<section class="">
+    <h1 class="">Inicio Sesion</h1>
+    <form method="POST" class="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Inicio Sesion</button>
+    </form>
+</section>
+{% endblock content %}

@@ -1,6 +1,27 @@
 <nav>
   <ul class="flex gap-4 ">
     <li><a href="{% url 'home' %}">Inicio</a></li>
+    {% if user.is_authenticated %}
+
+    {% if user.is_colaborator %}
+    <li>
+      <!-- <a href="{% url 'post:post_create' %}"> -->
+      Inicio</a>
+    </li>
+    {% endif %}
+
     <li><a href="{% url 'user:user_profile' %}">Perfil</a></li>
+    <li>
+      <form method="POST" action="{% url 'user:auth_logout' %}">
+        {% csrf_token %}
+        <button type="submit"> Cerrar Sesion</button>
+      </form>
+    </li>
+
+    {% else %}
+    <li><a href="{% url 'user:user_login' %}">Iniciar Sesion</a></li>
+    <li><a href="{% url 'user:user_register' %}">Registrarse</a></li>
+
+    {% endif %}
   </ul>
 </nav>
