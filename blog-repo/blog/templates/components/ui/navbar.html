@@ -19,8 +19,8 @@
     </li>
 
     {% else %}
-    <li><a href="{% url 'user:user_login' %}">Iniciar Sesion</a></li>
-    <li><a href="{% url 'user:user_register' %}">Registrarse</a></li>
+    <li><a href="{% url 'user:auth_login' %}">Iniciar Sesion</a></li>
+    <li><a href="{% url 'user:auth_register' %}">Registrarse</a></li>
 
     {% endif %}
   </ul>

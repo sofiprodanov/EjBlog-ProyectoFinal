@@ -4,12 +4,40 @@
 {% block title %} Inicio Sesion {% endblock title %}
 
 {% block content %}
-<section class="">
-    <h1 class="">Inicio Sesion</h1>
-    <form method="POST" class="">
+<section class="flex justify-center items-center flex-col">
+    <div class="flex flex-col gap-5 justify-center items-center">
+    <h1 class="text-[#1F41BB] font-bold text-3xl">Login here</h1>
+        <p class="font-semibold text-[20px] text-center"> Welcome back you´ve <br>been missed!</p>
+    </div>
+
+    <form method="POST" class="flex flex-col gap-5 mt-14">
         {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Inicio Sesion</button>
+        <div class="bg-blue-50 w-80 h-15 flex justify-center items-center rounded-lg">
+        {{ form.username }}
+        {{ form.username.errors }}
+        </div>
+        <div class="bg-blue-50 w-80 h-15 flex justify-center items-center rounded-lg">
+        {{ form.password }}
+        {{ form.password.errors }}
+        </div>
+
+        <button type="submit" class="w-full h-15 bg-[#1F41BB] rounded-lg text-white mt-4 font-semibold text-2xl">Inicio Sesion</button>
     </form>
+    <a href="{% url 'user:auth_login' %}" class="font-semibold text-gray-700 mt-4"> Create new account</a>
+
+  <div class="mt-8 flex justify-center items-center flex-col gap-4">
+    <span class="text-[#1F41BB] font-semibold">Or continue with</span>
+    <div class="flex gap-2">
+      <div class="w-14 h-10 bg-gray-200 rounded-md">
+      <a href=""><p class="w-full h-full text-[40px] flex justify-center items-center">{% bs_icon 'facebook' size='0.5em' %}</p></a>
+      </div>
+      <div class="w-14 h-10 bg-gray-200 rounded-md">
+      <a href="" ><p class="w-full h-full text-[40px] flex justify-center items-center">{% bs_icon 'apple' size='0.5em' %}</p></a>
+      </div>
+      <div class="w-14 h-10 bg-gray-200 rounded-md">
+      <a href="" ><p class="w-full h-full text-[40px] flex justify-center items-center">{% bs_icon 'google' size='0.5em' %}</p></a>
+      </div>
+    </div>
+  </div>
 </section>
 {% endblock content %}
